@@ -38,6 +38,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin-right: 4rem;
 }
 
 .tech-tabs button {
@@ -67,16 +68,15 @@ export default {
     flex-direction: row;
     justify-content: center;
     margin: 2rem 0;
+    gap: 1rem;
   }
 
   .tech-tabs button {
     width: 60px;
     height: 60px;
     font-size: 1.5rem;
-  }
+    
 }
-</style>
-<style scoped>
 .tech-tabs {
   display: flex;
   flex-direction: column;
@@ -105,7 +105,8 @@ export default {
   border-color: #FFFFFF;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px)
+ {
   .tech-tabs {
     flex-direction: row;
     justify-content: center;
@@ -117,5 +118,6 @@ export default {
     height: 60px;
     font-size: 1.5rem;
   }
+}
 }
 </style>

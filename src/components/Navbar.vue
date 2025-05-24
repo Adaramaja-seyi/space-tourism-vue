@@ -3,7 +3,7 @@
       <div class="logo">
         <img src="/public/shared/logo.svg" alt="Space Tourism Logo" />
       </div>
-      <!-- <b-button
+      <b-button
         v-b-toggle.nav-collapse
         class="hamburger d-lg-none"
         variant="link"
@@ -11,8 +11,8 @@
         <div></div>
         <div></div>
         <div></div>
-      </b-button> -->
-      <!-- <b-collapse id="nav-collapse" class="nav-links" is-nav> -->
+      </b-button>
+      <b-collapse id="nav-collapse" class="nav-links" is-nav>
         <ul class="nav-links-list">
           <li>
            
@@ -32,18 +32,13 @@
             <router-link :to="{name: 'technology'}">  <span>03</span> Technology</router-link>
           </li>
         </ul>
-      <!-- </b-collapse> -->
+      </b-collapse>
     </nav>
   </template>
   
   <script>
   export default {
-    // name: 'Navbar',
-    // computed: {
-    //   currentPage() {
-    //     return window.location.pathname.split('/').pop() || 'index.html';
-    //   },
-    // },
+   
   };
   </script>
   

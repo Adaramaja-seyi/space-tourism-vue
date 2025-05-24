@@ -42,7 +42,7 @@
     margin: 2rem 0;
   }
   
-  .crew-tabs button {
+ .crew-tabs button {
     width: 15px;
     height: 15px;
     border-radius: 50%;
@@ -50,7 +50,7 @@
     background-color: rgba(255, 255, 255, 0.17);
     cursor: pointer;
     transition: background-color 0.3s;
-  }
+  } 
   
   .crew-tabs button.active {
     background-color: #FFFFFF;
