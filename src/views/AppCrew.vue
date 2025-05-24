@@ -192,11 +192,14 @@ p {
   }
 
   h3 {
-    font-size: 32px;
+    font-size: 22px;
+  }
+  h2{
+    font-size: 16px;
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 15px;
   }
 
   p {

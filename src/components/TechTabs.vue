@@ -1,4 +1,3 @@
-
 <template>
   <div class="tech-tabs">
     <button
@@ -14,23 +13,23 @@
 
 <script>
 export default {
-  name: 'TechTabs',
+  name: "TechTabs",
   props: {
     technologies: {
       type: Array,
-      required: true
+      required: true,
     },
     selectedTech: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     selectTech(tech) {
-      this.$emit('update:selectedTech', tech)
-    }
-  }
-}
+      this.$emit("update:selectedTech", tech);
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -47,20 +46,20 @@ export default {
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.25);
   background: none;
-  color: #FFFFFF;
-  font-family: 'Bellefair', serif;
-  font-size: 2rem;
+  color: #ffffff;
+  font-family: "Bellefair", serif;
+  font-size: 32px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .tech-tabs button.active {
-  background-color: #FFFFFF;
-  color: #0B0D17;
+  background-color: #ffffff;
+  color: #0b0d17;
 }
 
 .tech-tabs button:hover:not(.active) {
-  border-color: #FFFFFF;
+  border-color: #ffffff;
 }
 
 @media (max-width: 768px) {
@@ -72,52 +71,21 @@ export default {
   }
 
   .tech-tabs button {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-    
-}
-.tech-tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+    width: 58px;
+    height: 58px;
+    font-size: 24px;
+  }
 }
 
-.tech-tabs button {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: none;
-  color: #FFFFFF;
-  font-family: 'Bellefair', serif;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.tech-tabs button.active {
-  background-color: #FFFFFF;
-  color: #0B0D17;
-}
-
-.tech-tabs button:hover:not(.active) {
-  border-color: #FFFFFF;
-}
-
-@media (max-width: 768px)
- {
+@media (max-width: 480px) {
   .tech-tabs {
-    flex-direction: row;
-    justify-content: center;
-    margin: 2rem 0;
+    gap: 16px;
   }
 
   .tech-tabs button {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
   }
-}
 }
 </style>

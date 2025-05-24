@@ -1,7 +1,7 @@
 <template>
   <nav-bar />
   <div class="technology">
-    <div class="container">
+    <div class="technology-content">
       <h2><span>03</span> Space launch 101</h2>
       <div class="technology-layout">
         <div class="left-section">
@@ -11,36 +11,37 @@
             @update:selectedTech="selectTech"
           />
         </div>
-        <div class="tech-contain">
-          <div class="tech-content">
-            <h4>THE TERMINOLOGY...</h4>
-            <h3>{{ selectedTech.name }}</h3>
-            <p>{{ selectedTech.description }}</p>
-          </div>
-         </div>
-          <div class="tech-image">
+        <div class="tech-info">
+          <h4>The terminology...</h4>
+          <h3>{{ selectedTech.name }}</h3>
+          <p>{{ selectedTech.description }}</p>
+        </div>
+        <div class="tech-image">
           <img
             :src="
-              windowWidth > 768
-                ? selectedTech.images.portrait
-                : selectedTech.images.landscape
+              getImageUrl(
+                windowWidth > 768
+                  ? selectedTech.images?.portrait
+                  : selectedTech.images?.landscape
+              )
             "
             :alt="selectedTech.name"
           />
-          </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import TechTabs from "../components/TechTabs.vue";
+
+import TechTabs from "@/components/TechTabs.vue";
 import techData from "@/assets/data.json";
 
 export default {
   name: "AppTechnology",
   components: {
-    // Navbar,
+    
     TechTabs,
   },
   data() {
@@ -80,128 +81,145 @@ export default {
 <style scoped>
 .technology {
   min-height: 100vh;
-  background-image: url("/public/technology/background-technology-desktop.jpg");
+  background-image: url("/images/technology/background-technology-desktop.jpg");
   background-size: cover;
   background-position: center;
-  padding: 2rem 0 2rem 10%;
   color: #ffffff;
 }
 
-.container {
-  max-width: 1440px;
-  margin: 0 auto;
-  padding-top: 80px;
+.technology-content {
+  padding: 76px 0 0 165px;
 }
-.tech-contain{
-  display: flex;
-  flex-direction: column;
-}
+
 h2 {
   font-family: "Barlow Condensed", sans-serif;
   font-size: 28px;
-  letter-spacing: 4.75px;
+  letter-spacing: 4.725px;
   text-transform: uppercase;
-  margin-bottom: 3rem;
+  margin-bottom: 26px;
 }
 
 h2 span {
   opacity: 0.25;
-  margin-right: 1rem;
+  margin-right: 24px;
+  font-weight: 700;
 }
 
 .technology-layout {
   display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  gap: 2rem;
+  justify-content: space-evenly;
+  gap: 60px;
+  margin-top: 86px;
+
 }
 
 .left-section {
   display: flex;
-  align-items: flex-start;
-  gap: 4rem;
+  /* gap: 40px; */
+  padding-top: 111px;
 }
 
-.tech-content {
+.tech-info {
   max-width: 470px;
-  margin-left: -10%;
+  margin-top: 90px;
+  margin-left: -120px;
 }
 
 h4 {
   font-family: "Barlow Condensed", sans-serif;
-  font-size: 16px;
+  font-size: 30px;
   letter-spacing: 2.7px;
   color: #d0d6f9;
-  margin-bottom: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 11px;
 }
 
-h3 {
+h1 {
   font-family: "Bellefair", serif;
-  font-size: 36px;
+  font-size: 700px;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 17px;
 }
 
 p {
   font-family: "Barlow", sans-serif;
-  font-size: 15px;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 32px;
   color: #d0d6f9;
 }
 
-.tech-image {
-  margin-right: 10%;
-  display: flex;
-  
-}
-
 .tech-image img {
-  max-height: 527px;
+  height: 527px;
   width: auto;
 }
 
 @media (max-width: 1024px) {
-  h3 {
-    font-size: 40px;
+  .technology-content {
+    padding: 76px 0 0 40px;
+  }
+
+  .technology-layout {
+    gap: 60px;
   }
 
   .left-section {
-    gap: 2rem;
+    gap: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .technology {
-    padding: 2rem 0;
     background-image: url("/images/technology/background-technology-tablet.jpg");
+  }
+
+  .technology-content {
+    padding: 40px 0 0;
+  }
+
+  h2 {
+    font-size: 20px;
+    letter-spacing: 3.375px;
+    padding-left: 38px;
   }
 
   .technology-layout {
     flex-direction: column-reverse;
+    gap: 56px;
+    margin-top: 60px;
   }
 
   .left-section {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 0 5%;
+    padding: 4px;
+    gap: 44px;
+  }
+
+  .tech-info {
+    max-width: 958px;
+    margin-left: 15px;
+    text-align: center;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 28px;
   }
 
   .tech-image {
-    margin-right: 0;
     width: 100%;
-    
   }
 
   .tech-image img {
     width: 100%;
-    max-height: none;
-    object-fit: cover;
-    gap: 3rem;
-  }
-
-  h2 {
-    padding-left: 5%;
+    height: auto;
   }
 }
 
@@ -210,12 +228,34 @@ p {
     background-image: url("/images/technology/background-technology-mobile.jpg");
   }
 
-  h3 {
-    font-size: 32px;
+  h2 {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+    margin-bottom: 32px;
+  }
+
+  .technology-layout {
+    gap: 4px;
+    margin-top: 32px;
+  }
+
+  .left-section {
+    gap: 26px;
+  }
+
+  h4 {
+    font-size: 14px;
+    letter-spacing: 2.36px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
   }
 
   p {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 25px;
   }
 }
 </style>
