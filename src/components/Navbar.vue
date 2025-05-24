@@ -153,6 +153,7 @@ export default {
     height: 21px;
     border: 0;
     cursor: pointer;
+   
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {

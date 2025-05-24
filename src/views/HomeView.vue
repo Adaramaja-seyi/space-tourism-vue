@@ -35,7 +35,7 @@ export default {
 <style scoped>
 .home {
   min-height: 100vh;
-  background-image: url("/images/home/background-home-desktop.jpg");
+  background-image: url("/public/home/background-home-desktop.jpg");
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -146,7 +146,7 @@ p {
 
 @media (max-width: 768px) {
   .home {
-    background-image: url("/images/home/background-home-tablet.jpg");
+    background-image: url("/public/home/background-home-tablet.jpg");
   }
 
   h5 {
@@ -167,7 +167,7 @@ p {
 
 @media (max-width: 480px) {
   .home {
-    background-image: url("/images/home/background-home-mobile.jpg");
+    background-image: url("/public/home/background-home-mobile.jpg");
     text-align: center;
   }
 

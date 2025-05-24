@@ -72,12 +72,13 @@ export default {
 <style scoped>
 .destination-page {
   min-height: 100vh;
-  background-image: url('/images/destination/background-destination-desktop.jpg');
+  background-image: url('/public/destination/background-destination-desktop.jpg');
   background-size: cover;
   background-position: center;
   color: #FFFFFF;
   /* padding: 76px 11.5% 0; */
   overflow: hidden;
+  ;
 }
 
 h2 {
@@ -168,7 +169,7 @@ h1 {
   .destination-page {
     padding: 0;
     text-align: center;
-    background-image: url('/images/destination/background-destination-tablet.jpg');
+    background-image: url('/public/destination/background-destination-tablet.jpg');
   }
 
   h2 {
@@ -225,7 +226,7 @@ h1 {
 
 @media (max-width: 480px) {
   .destination-page {
-    background-image: url('/images/destination/background-destination-mobile.jpg');
+    background-image: url('/public/destination/background-destination-mobile.jpg');
   }
   .dest-container{
     

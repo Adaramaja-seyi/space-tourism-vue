@@ -81,7 +81,7 @@ export default {
 <style scoped>
 .technology {
   min-height: 100vh;
-  background-image: url("/images/technology/background-technology-desktop.jpg");
+  background-image: url("/public/technology/background-technology-desktop.jpg");
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -169,7 +169,7 @@ p {
 
 @media (max-width: 768px) {
   .technology {
-    background-image: url("/images/technology/background-technology-tablet.jpg");
+    background-image: url("/public/technology/background-technology-tablet.jpg");
   }
 
   .technology-content {
@@ -225,7 +225,7 @@ p {
 
 @media (max-width: 480px) {
   .technology {
-    background-image: url("/images/technology/background-technology-mobile.jpg");
+    background-image: url("/public/technology/background-technology-mobile.jpg");
   }
 
   h2 {

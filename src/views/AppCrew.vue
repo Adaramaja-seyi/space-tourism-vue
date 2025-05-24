@@ -173,7 +173,7 @@ p {
 
 @media (max-width: 768px) {
   .crew {
-    background-image: url('/images/crew/background-crew-tablet.jpg');
+    background-image: url('/public/crew/background-crew-tablet.jpg');
     padding: 2rem 5%;
   }
 
@@ -184,7 +184,7 @@ p {
 
 @media (max-width: 480px) {
   .crew {
-    background-image: url('/images/crew/background-crew-mobile.jpg');
+    background-image: url('/public/crew/background-crew-mobile.jpg');
   }
 
   .crew-image img {
