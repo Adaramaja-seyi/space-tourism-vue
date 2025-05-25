@@ -35,7 +35,7 @@ export default {
 <style scoped>
 .home {
   min-height: 100vh;
-  background-image: url("/public/home/background-home-desktop.jpg");
+  background-image: url("/public/hom_Image/background-home-desktop.jpg");
   background-size: cover;
   background-position: center;
   color: #ffffff;
