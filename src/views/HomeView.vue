@@ -167,7 +167,7 @@ p {
 
 @media (max-width: 480px) {
   .home {
-    background-image: url("/public/home/background-home-mobile.jpg");
+    background-image: url("/public/hom_Image/background-home-mobile.jpg");
     text-align: center;
   }
 
